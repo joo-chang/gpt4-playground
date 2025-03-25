@@ -78,7 +78,7 @@ export default function AddTokenModal({ className }: Props) {
             </p>
             <form onSubmit={handleSubmit}>
               <input
-                type="text"
+                type="password"
                 placeholder="sk-NhU98cac878..."
                 className="mt-4 w-full rounded border-none bg-secondary p-4 text-primary outline-none"
                 onChange={handleInput}
