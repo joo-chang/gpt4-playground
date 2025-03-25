@@ -18,7 +18,9 @@ export default function ChatInput({}: Props) {
     if (loading) return;
     e.preventDefault();
     addMessage(input, true, "user");
-    setInput("");
+    setTimeout(() => {
+      setInput("");
+    }, 0);
   };
 
   React.useEffect(() => {
