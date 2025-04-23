@@ -23,5 +23,4 @@ export interface OpenAIConfig {
 export interface OpenAIModel {
   id: string;
   name: string;
-  maxLimit: number;
 }
