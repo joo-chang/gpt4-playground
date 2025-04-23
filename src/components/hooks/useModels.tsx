@@ -18,20 +18,15 @@ export default function useModels() {
 
     const fetchModels = async () => {
       setLoadingModels(true);
-      const models = await fetch("https://api.openai.com/v1/models", {
+      const models = await fetch("/api/models", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
           authorization: `Bearer ${token}`,
         },
       })
-        .then((res) => {
-          return res.json();
-        })
-        .then((res) => {
-          console.log(res.data);
-          return res.data;
-        });
+        .then((res) => res.json())
+        .then((res) => res.chatModels);
 
       setModels(models || []);
       setLoadingModels(false);

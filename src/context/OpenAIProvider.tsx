@@ -129,7 +129,9 @@ export default function OpenAIProvider({ children }: PropsWithChildren) {
     setConfig((prev) => {
       // If model changes set max tokens to half of the model's max tokens
       if (newConfig.model && newConfig.model !== prev.model) {
-        newConfig.max_tokens = 8192;
+        newConfig.max_tokens = Math.floor(
+          OpenAIChatModels[newConfig.model].maxLimit / 2
+        );
       }
 
       return {
