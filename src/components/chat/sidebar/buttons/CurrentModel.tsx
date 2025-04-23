@@ -2,7 +2,7 @@ import React from "react";
 import { useOpenAI } from "@/context/OpenAIProvider";
 import Dropdown from "./../../../input/Dropdown";
 import useModels from "./../../../hooks/useModels";
-import { OpenAIConfig } from '@/utils/OpenAI';
+import { OpenAIConfig } from "@/utils/OpenAI";
 
 type Props = {};
 
@@ -20,15 +20,15 @@ export default function CurrentModel({}: Props) {
   };
 
   return (
-    <div className="p-1 text-primary">
-      <h3 className="text-sm font-medium">CURRENT MODEL</h3>
+    <div className="p-1">
+      <h3 className="dark text-sm font-medium">CURRENT MODEL</h3>
       <Dropdown
         options={
           loadingModels
             ? []
             : (models.map(({ id }) => ({ label: id, value: id })) as any)
         }
-        className="border-white/10 text-primary/80"
+        className="brder-white/10 "
         value={config.model}
         onSelect={(option) => handleUpdateConfig("model", option)}
       />

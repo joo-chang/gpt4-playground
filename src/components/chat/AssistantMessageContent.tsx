@@ -45,10 +45,15 @@ export default function AssistantMessageContent({ content, ...props }: Props) {
       );
     },
     strong: ({ node, inline, className, children, ...props }: any) => {
+      if (children[0] === "_") {
+        return (
+          <span className="mx-1 border-b-2 border-gray-400 px-4">&nbsp;</span>
+        );
+      }
       return (
-        <span className={className} {...props}>
-          __{children}__
-        </span>
+        <strong className={className} {...props}>
+          {children}
+        </strong>
       );
     },
 

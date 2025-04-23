@@ -7,7 +7,7 @@ import ThemeButton from "./buttons/ThemeButton";
 import ButtonContainer from "./buttons/ButtonContainer";
 import Conversations from "./conversation/Conversations";
 import ApiKey from "./buttons/ApiKey";
-import CurrentModel from './buttons/CurrentModel';
+import CurrentModel from "./buttons/CurrentModel";
 
 type Props = {};
 
@@ -15,7 +15,7 @@ export default function ChatSidebar({}: Props) {
   const { clearConversations } = useOpenAI();
 
   return (
-    <div className="dark left-0 top-0 h-full max-h-screen flex-col bg-gray-900 text-primary md:fixed md:flex md:w-[260px]">
+    <div className="dark left-0 top-0 h-full max-h-screen flex-col bg-gray-100 text-gray-900 md:fixed md:flex md:w-[260px]">
       <div className="flex h-full flex-col items-stretch p-2">
         <Link
           href="/"
@@ -28,7 +28,7 @@ export default function ChatSidebar({}: Props) {
         <Conversations />
 
         <div className="flex flex-col gap-y-2 border-y border-white/10 py-2">
-          <div className="flex flex-col border-b border-white/10 gap-y-2">
+          <div className="flex flex-col gap-y-2 border-b border-white/10">
             <CurrentModel />
             <ApiKey />
           </div>
@@ -44,13 +44,8 @@ export default function ChatSidebar({}: Props) {
             Clear Conversations
           </ButtonContainer>
 
-          <ThemeButton />
+          {/* <ThemeButton /> */}
         </div>
-
-        <Github />
-        <span className="text-center text-primary/80">
-          Made with ❤️ by Nashex
-        </span>
       </div>
     </div>
   );

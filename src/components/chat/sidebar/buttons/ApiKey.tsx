@@ -19,11 +19,8 @@ export default function ApiKey({}: Props) {
         <div className="group flex flex-row items-center">
           <div className="relative flex items-center gap-3 overflow-hidden text-ellipsis whitespace-nowrap rounded p-3 text-primary/80 transition-colors">
             {token}
-            <div
-              className={`absolute bottom-0 right-0 z-10 h-full w-24 bg-gradient-to-r from-transparent to-[rgb(var(--bg-primary))]`}
-            />
           </div>
-          <div className="ml-2 flex grow flex-row items-center gap-2 w-fit">
+          <div className="ml-2 flex w-fit grow flex-row items-center gap-2">
             <button
               className="text-xl opacity-60 transition-opacity hover:opacity-100"
               onClick={handleCopyToken}
@@ -39,7 +36,7 @@ export default function ApiKey({}: Props) {
           </div>
         </div>
       ) : (
-        <AddTokenModal className="w-full bg-primary p-1 text-left hover:bg-secondary" />
+        <AddTokenModal className="w-full p-1 text-left" />
       )}
     </div>
   );

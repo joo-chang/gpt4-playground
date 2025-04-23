@@ -29,7 +29,7 @@ export default function AddTokenModal({ className }: Props) {
   return (
     <div>
       <button
-        className={`hidden rounded bg-green-500 p-4 text-white hover:bg-green-600 md:block ${className}`}
+        className={`hidden rounded p-4 text-white md:block ${className}`}
         onClick={() => setOpen(true)}
       >
         Add your API token
