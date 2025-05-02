@@ -12,7 +12,7 @@ export default function ChatHeader({}: Props) {
   return (
     <>
       <div className="dark top-0 flex h-[50px] justify-between bg-primary px-4 text-2xl text-primary">
-        <button className="p-2" onClick={() => setIsOpen(true)}>
+        <button className="p-2" onClick={() => setIsOpen(!isOpen)}>
           <MdMenu />
         </button>
 
@@ -32,12 +32,6 @@ export default function ChatHeader({}: Props) {
         <div className="shadow-4xl h-full w-1/5">
           <ChatSidebar />
         </div>
-        <button
-          className={`absolute right-0 top-0 p-4 text-primary`}
-          onClick={() => setIsOpen(false)}
-        >
-          <MdClose />
-        </button>
       </Transition>
     </>
   );

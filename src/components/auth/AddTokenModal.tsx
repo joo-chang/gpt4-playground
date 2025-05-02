@@ -28,18 +28,6 @@ export default function AddTokenModal({ className }: Props) {
 
   return (
     <div>
-      <button
-        className={`hidden rounded p-4 text-white md:block ${className}`}
-        onClick={() => setOpen(true)}
-      >
-        Add your API token
-      </button>
-      <button
-        className={`flex items-center gap-x-1 rounded bg-green-500 p-4 text-white hover:bg-green-600 ${className}`}
-        onClick={() => setOpen(true)}
-      >
-        <MdToken /> Api Key
-      </button>
       {open && (
         <div className="absolute left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-50 transition-all">
           <div className="relative m-4 max-w-2xl rounded bg-tertiary p-4 shadow-xl">

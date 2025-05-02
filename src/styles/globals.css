@@ -5,8 +5,8 @@
 @layer base {
   :root {
     --text-primary: 255, 255, 255;
-    --bg-primary: 17, 24, 39;
-    --bg-secondary: 31, 41, 55;
-    --bg-tertiary: 55, 65, 81;
+    --bg-primary: 13, 17, 23;
+    --bg-secondary: 22, 27, 34;
+    --bg-tertiary: 33, 38, 45;
   }
 }

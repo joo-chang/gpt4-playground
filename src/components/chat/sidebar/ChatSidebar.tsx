@@ -14,11 +14,11 @@ export default function ChatSidebar({}: Props) {
   const { clearConversations } = useOpenAI();
 
   return (
-    <div className="left-0 top-0 h-full max-h-screen flex-col bg-gray-900 text-primary">
+    <div className="left-0 top-0 h-full max-h-screen flex-col bg-primary text-primary">
       <div className="flex h-full flex-col items-stretch p-2">
         <Link
           href="/"
-          className="flex items-center gap-3 rounded border border-white/20 p-4 transition-colors hover:bg-gray-500/10"
+          className="flex items-center gap-3 rounded border border-white/20 p-4 transition-colors hover:bg-secondary/70"
         >
           <MdAdd />
           New chat
@@ -31,13 +31,6 @@ export default function ChatSidebar({}: Props) {
             <CurrentModel />
             <ApiKey />
           </div>
-          <Link
-            className="flex items-center gap-3 rounded p-3 transition-colors hover:bg-gray-500/10"
-            href="/playground"
-          >
-            <MdBuild />
-            Playground
-          </Link>
           <ButtonContainer onClick={clearConversations}>
             <MdDeleteOutline />
             Clear Conversations

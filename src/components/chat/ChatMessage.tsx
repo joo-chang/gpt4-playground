@@ -20,16 +20,16 @@ export default function ChatMessage({ message: { id, role, content } }: Props) {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <div className="relative max-w-screen mx-auto flex w-full max-w-4xl flex-row items-center">
+      <div className="max-w-screen relative mx-auto flex w-full max-w-4xl flex-row items-center">
         <div
-          className={`flex sticky top-0 my-4 h-10 w-10 items-center justify-center text-4xl mr-2 self-start transition-colors ${
+          className={`sticky top-0 my-4 mr-2 flex h-10 w-10 items-center justify-center self-start text-4xl transition-colors ${
             hover ? "text-stone-300" : "text-primary/20"
           }`}
         >
           {role === "user" ? <MdPerson /> : <MdSmartToy />}
         </div>
         <div className="overflow-x-auto">
-          <div className="text-md prose w-full max-w-4xl rounded p-4 text-primary dark:prose-invert prose-code:text-primary prose-pre:bg-transparent prose-pre:p-0">
+          <div className="text-md prose prose-invert w-full max-w-4xl rounded p-4 text-white prose-code:text-white prose-pre:bg-transparent prose-pre:p-0">
             {role === "user" ? (
               <UserMessageContent content={content} />
             ) : (
