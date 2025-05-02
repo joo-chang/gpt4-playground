@@ -28,6 +28,9 @@ export default function AddTokenModal({ className }: Props) {
 
   return (
     <div>
+      <button className="px-2  py-1 text-white" onClick={() => setOpen(true)}>
+        Add Token
+      </button>
       {open && (
         <div className="absolute left-0 top-0 z-50 flex h-full w-full items-center justify-center bg-black bg-opacity-50 transition-all">
           <div className="relative m-4 max-w-2xl rounded bg-tertiary p-4 shadow-xl">

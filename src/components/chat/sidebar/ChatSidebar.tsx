@@ -31,10 +31,6 @@ export default function ChatSidebar({}: Props) {
             <CurrentModel />
             <ApiKey />
           </div>
-          <ButtonContainer onClick={clearConversations}>
-            <MdDeleteOutline />
-            Clear Conversations
-          </ButtonContainer>
         </div>
       </div>
     </div>

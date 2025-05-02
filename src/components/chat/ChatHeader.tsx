@@ -11,7 +11,7 @@ export default function ChatHeader({}: Props) {
 
   return (
     <>
-      <div className="dark top-0 flex h-[50px] justify-between bg-primary px-4 text-2xl text-primary">
+      <div className="dark top-0 flex h-[50px] items-center justify-between bg-primary px-4 text-primary">
         <button className="p-2" onClick={() => setIsOpen(!isOpen)}>
           <MdMenu />
         </button>
