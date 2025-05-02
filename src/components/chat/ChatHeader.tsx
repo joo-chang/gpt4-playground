@@ -11,12 +11,12 @@ export default function ChatHeader({}: Props) {
 
   return (
     <>
-      <div className="dark top-0 flex h-[50px] justify-between bg-primary px-4 text-2xl text-primary md:hidden">
+      <div className="dark top-0 flex h-[50px] justify-between bg-primary px-4 text-2xl text-primary">
         <button className="p-2" onClick={() => setIsOpen(true)}>
           <MdMenu />
         </button>
 
-        <AddTokenModal className="text-sm p-1 m-2 px-2" />
+        <AddTokenModal className="m-2 p-1 px-2 text-sm" />
       </div>
       {/* Animate slide in from left */}
       <Transition
@@ -29,7 +29,7 @@ export default function ChatHeader({}: Props) {
         leaveFrom="transform translate-x-0"
         leaveTo="transform -translate-x-full"
       >
-        <div className="shadow-4xl h-full w-2/3">
+        <div className="shadow-4xl h-full w-1/5">
           <ChatSidebar />
         </div>
         <button

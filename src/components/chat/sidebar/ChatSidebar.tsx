@@ -3,7 +3,6 @@ import React from "react";
 import { MdAdd, MdDeleteOutline, MdBuild } from "react-icons/md";
 import { useOpenAI } from "@/context/OpenAIProvider";
 import Github from "../../misc/Github";
-import ThemeButton from "./buttons/ThemeButton";
 import ButtonContainer from "./buttons/ButtonContainer";
 import Conversations from "./conversation/Conversations";
 import ApiKey from "./buttons/ApiKey";
@@ -15,7 +14,7 @@ export default function ChatSidebar({}: Props) {
   const { clearConversations } = useOpenAI();
 
   return (
-    <div className="dark left-0 top-0 h-full max-h-screen flex-col bg-gray-100 text-gray-900 md:fixed md:flex md:w-[260px]">
+    <div className="left-0 top-0 h-full max-h-screen flex-col bg-gray-900 text-primary">
       <div className="flex h-full flex-col items-stretch p-2">
         <Link
           href="/"
@@ -43,8 +42,6 @@ export default function ChatSidebar({}: Props) {
             <MdDeleteOutline />
             Clear Conversations
           </ButtonContainer>
-
-          {/* <ThemeButton /> */}
         </div>
       </div>
     </div>
